@@ -5,18 +5,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
+    const offsetX = 32;
+    const offsetY = 32;
     const speed = 0.3;
 
+    cursor.style.opacity = "0";
+
     document.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.opacity = "1";
+        if (mouseX === 0 && mouseY === 0) {
+            mouseX = e.clientX + offsetX;
+            mouseY = e.clientY + offsetY;
+            cursorX = mouseX;
+            cursorY = mouseY;
+            cursor.style.opacity = "1";
+            cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+        }
+    }, { once: true });
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX + offsetX;
+        mouseY = e.clientY + offsetY;
     });
 
     function animateCursor() {
         cursorX += (mouseX - cursorX) * speed;
         cursorY += (mouseY - cursorY) * speed;
-        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+
+        const angle = cursor.classList.contains("hover") ? -15 : 0;
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) rotate(${angle}deg)`;
+
         requestAnimationFrame(animateCursor);
     }
 
