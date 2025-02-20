@@ -1,0 +1,76 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #E4E4E4;
+    pointer-events: none;
+    transform-origin: center;
+    transition: width 0.15s ease, height 0.15s ease, transform 0.1s linear;
+    z-index: 10000;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0;
+}
+
+.custom-cursor.hover {
+    width: 100px;
+    height: 100px;
+    background: #E4E4E4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+
+    clip-path: polygon(20px 0,
+
+            calc(100% - 20px) 0,
+            calc(100% - 20px) 10px,
+            calc(100% - 10px) 10px,
+            calc(100% - 10px) 20px,
+            100% 20px,
+
+            100% calc(100% - 20px),
+            calc(100% - 10px) calc(100% - 20px),
+            calc(100% - 10px) calc(100% - 10px),
+            calc(100% - 20px) calc(100% - 10px),
+            calc(100% - 20px) 100%,
+
+            20px 100%,
+            20px calc(100% - 10px),
+            10px calc(100% - 10px),
+            10px calc(100% - 20px),
+            0 calc(100% - 20px),
+
+            0 20px,
+            10px 20px,
+            10px 10px,
+            20px 10px);
+    -webkit-clip-path: polygon(20px 0,
+
+            calc(100% - 20px) 0,
+            calc(100% - 20px) 10px,
+            calc(100% - 10px) 10px,
+            calc(100% - 10px) 20px,
+            100% 20px,
+
+            100% calc(100% - 20px),
+            calc(100% - 10px) calc(100% - 20px),
+            calc(100% - 10px) calc(100% - 10px),
+            calc(100% - 20px) calc(100% - 10px),
+            calc(100% - 20px) 100%,
+
+            20px 100%,
+            20px calc(100% - 10px),
+            10px calc(100% - 10px),
+            10px calc(100% - 20px),
+            0 calc(100% - 20px),
+
+            0 20px,
+            10px 20px,
+            10px 10px,
+            20px 10px);
+}

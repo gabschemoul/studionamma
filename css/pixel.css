@@ -1,0 +1,453 @@
+.pixelized_1-0-0-0 {
+    clip-path: polygon(1.5vw 0,
+
+            100% 0,
+
+            100% 100%,
+
+            0 100%,
+            0 1.5vw,
+            1.5vw 1.5vw);
+    -webkit-clip-path: polygon(1.5vw 0,
+
+            100% 0,
+
+            100% 100%,
+
+            0 100%,
+            0 1.5vw,
+            1.5vw 1.5vw);
+}
+
+.pixelized_0-1-0-0 {
+    clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% 100%,
+
+            0 100%);
+    -webkit-clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% 100%,
+
+            0 100%);
+}
+
+.pixelized_0-0-1-0 {
+    clip-path: polygon(0 0,
+
+            100% 0,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100%);
+    -webkit-clip-path: polygon(0 0,
+
+            100% 0,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100%);
+}
+
+.pixelized_0-0-0-1 {
+    clip-path: polygon(0 0,
+
+            100% 0,
+
+            100% 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+    -webkit-clip-path: polygon(0 0,
+
+            100% 0,
+
+            100% 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+}
+
+.pixelized_0-1-0-1 {
+    clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+    -webkit-clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+}
+
+.pixelized_0-1-1-1 {
+    clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+    -webkit-clip-path: polygon(0 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw));
+}
+
+.pixelized_1-1-1-1 {
+    clip-path: polygon(1.5vw 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw),
+
+            0 1.5vw,
+            1.5vw 1.5vw);
+    -webkit-clip-path: polygon(1.5vw 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            1.5vw 100%,
+            1.5vw calc(100% - 1.5vw),
+            0 calc(100% - 1.5vw),
+
+            0 1.5vw,
+            1.5vw 1.5vw);
+}
+
+.pixelized_1-0-1-0 {
+    clip-path: polygon(1.5vw 0,
+
+            100% 0,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100%,
+
+            0 1.5vw,
+            1.5vw 1.5vw);
+    -webkit-clip-path: polygon(1.5vw 0,
+
+            100% 0,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100%,
+
+            0 1.5vw,
+            1.5vw 1.5vw);
+}
+
+.pixelized_1-3-1-0 {
+    clip-path: polygon(1.5vw 0,
+
+            calc(100% - 3vw) 0,
+            calc(100% - 3vw) 1.5vw,
+            calc(100% - 1.5vw) 1.5vw,
+            calc(100% - 1.5vw) 3vw,
+            100% 3vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100% 0 1.5vw,
+            1.5vw 1.5vw);
+    -webkit-clip-path: polygon(1.5vw 0,
+
+            calc(100% - 3vw) 0,
+            calc(100% - 3vw) 1.5vw,
+            calc(100% - 1.5vw) 1.5vw,
+            calc(100% - 1.5vw) 3vw,
+            100% 3vw,
+
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+
+            0 100% 0 1.5vw,
+            1.5vw 1.5vw);
+}
+
+/*.pixelized_1-3-1-1 {
+    clip-path: polygon(
+      1.5vw 0,
+      
+      calc(100% - 3vw) 0,
+      calc(100% - 3vw) 1.5vw,
+      calc(100% - 1.5vw) 1.5vw,
+      calc(100% - 1.5vw) 3vw,
+      100% 3vw,
+
+      100% calc(100% - 1.5vw),
+      calc(100% - 1.5vw) calc(100% - 1.5vw),
+      calc(100% - 1.5vw) 100%,
+
+      1.5vw 100%,
+      1.5vw calc(100% - 1.5vw),
+      0 calc(100% - 1.5vw),
+
+      0 1.5vw,
+      1.5vw 1.5vw
+    );
+    -webkit-clip-path: polygon(
+      1.5vw 0,
+      
+      calc(100% - 3vw) 0,
+      calc(100% - 3vw) 1.5vw,
+      calc(100% - 1.5vw) 1.5vw,
+      calc(100% - 1.5vw) 3vw,
+      100% 3vw,
+
+      100% calc(100% - 1.5vw),
+      calc(100% - 1.5vw) calc(100% - 1.5vw),
+      calc(100% - 1.5vw) 100%,
+
+      1.5vw 100%,
+      1.5vw calc(100% - 1.5vw),
+      0 calc(100% - 1.5vw),
+
+      0 1.5vw,
+      1.5vw 1.5vw
+    );
+  }*/
+
+.pixelized_1-3-1-1 {
+    clip-path: polygon(var(--_responsive---container--padding) 0,
+
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) 0,
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) calc(var(--_responsive---container--padding) * 2),
+            100% calc(var(--_responsive---container--padding) * 2),
+
+            100% calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) 100%,
+
+            var(--_responsive---container--padding) 100%,
+            var(--_responsive---container--padding) calc(100% - var(--_responsive---container--padding)),
+            0 calc(100% - var(--_responsive---container--padding)),
+
+            0 var(--_responsive---container--padding),
+            var(--_responsive---container--padding) var(--_responsive---container--padding));
+    -webkit-clip-path: polygon(var(--_responsive---container--padding) 0,
+
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) 0,
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) calc(var(--_responsive---container--padding) * 2),
+            100% calc(var(--_responsive---container--padding) * 2),
+
+            100% calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) 100%,
+
+            var(--_responsive---container--padding) 100%,
+            var(--_responsive---container--padding) calc(100% - var(--_responsive---container--padding)),
+            0 calc(100% - var(--_responsive---container--padding)),
+
+            0 var(--_responsive---container--padding),
+            var(--_responsive---container--padding) var(--_responsive---container--padding));
+}
+
+.pixelized_3-1-6-3 {
+    clip-path: polygon(3vw 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 4.5vw),
+            calc(100% - 1.5vw) calc(100% - 4.5vw),
+            calc(100% - 1.5vw) calc(100% - 3vw),
+            calc(100% - 3vw) calc(100% - 3vw),
+            calc(100% - 3vw) calc(100% - 1.5vw),
+            calc(100% - 4.5vw) calc(100% - 1.5vw),
+            calc(100% - 4.5vw) 100%,
+
+            3vw 100%,
+            3vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 3vw),
+            0 calc(100% - 3vw),
+
+            0 3vw,
+            1.5vw 3vw,
+            1.5vw 1.5vw,
+            3vw 1.5vw);
+    -webkit-clip-path: polygon(3vw 0,
+
+            calc(100% - 1.5vw) 0,
+            calc(100% - 1.5vw) 1.5vw,
+            100% 1.5vw,
+
+            100% calc(100% - 4.5vw),
+            calc(100% - 1.5vw) calc(100% - 4.5vw),
+            calc(100% - 1.5vw) calc(100% - 3vw),
+            calc(100% - 3vw) calc(100% - 3vw),
+            calc(100% - 3vw) calc(100% - 1.5vw),
+            calc(100% - 4.5vw) calc(100% - 1.5vw),
+            calc(100% - 4.5vw) 100%,
+
+            3vw 100%,
+            3vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 3vw),
+            0 calc(100% - 3vw),
+
+            0 3vw,
+            1.5vw 3vw,
+            1.5vw 1.5vw,
+            3vw 1.5vw);
+}
+
+.pixelized_3-3-3-3 {
+    clip-path: polygon(3vw 0,
+
+            calc(100% - 3vw) 0,
+            calc(100% - 3vw) 1.5vw,
+            calc(100% - 1.5vw) 1.5vw,
+            calc(100% - 1.5vw) 3vw,
+            100% 3vw,
+
+            100% calc(100% - 3vw),
+            calc(100% - 1.5vw) calc(100% - 3vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 3vw) calc(100% - 1.5vw),
+            calc(100% - 3vw) 100%,
+
+            3vw 100%,
+            3vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 3vw),
+            0 calc(100% - 3vw),
+
+            0 3vw,
+            1.5vw 3vw,
+            1.5vw 1.5vw,
+            3vw 1.5vw);
+    -webkit-clip-path: polygon(3vw 0,
+
+            calc(100% - 3vw) 0,
+            calc(100% - 3vw) 1.5vw,
+            calc(100% - 1.5vw) 1.5vw,
+            calc(100% - 1.5vw) 3vw,
+            100% 3vw,
+
+            100% calc(100% - 3vw),
+            calc(100% - 1.5vw) calc(100% - 3vw),
+            calc(100% - 1.5vw) calc(100% - 1.5vw),
+            calc(100% - 3vw) calc(100% - 1.5vw),
+            calc(100% - 3vw) 100%,
+
+            3vw 100%,
+            3vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 1.5vw),
+            1.5vw calc(100% - 3vw),
+            0 calc(100% - 3vw),
+
+            0 3vw,
+            1.5vw 3vw,
+            1.5vw 1.5vw,
+            3vw 1.5vw);
+}
+
+.article_content figure img {
+    clip-path: polygon(var(--_responsive---container--padding) 0,
+
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) 0,
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) calc(var(--_responsive---container--padding) * 2),
+            100% calc(var(--_responsive---container--padding) * 2),
+
+            100% calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) 100%,
+
+            var(--_responsive---container--padding) 100%,
+            var(--_responsive---container--padding) calc(100% - var(--_responsive---container--padding)),
+            0 calc(100% - var(--_responsive---container--padding)),
+
+            0 var(--_responsive---container--padding),
+            var(--_responsive---container--padding) var(--_responsive---container--padding));
+    -webkit-clip-path: polygon(var(--_responsive---container--padding) 0,
+
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) 0,
+            calc(100% - calc(var(--_responsive---container--padding) * 2)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) var(--_responsive---container--padding),
+            calc(100% - var(--_responsive---container--padding)) calc(var(--_responsive---container--padding) * 2),
+            100% calc(var(--_responsive---container--padding) * 2),
+
+            100% calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) calc(100% - var(--_responsive---container--padding)),
+            calc(100% - var(--_responsive---container--padding)) 100%,
+
+            var(--_responsive---container--padding) 100%,
+            var(--_responsive---container--padding) calc(100% - var(--_responsive---container--padding)),
+            0 calc(100% - var(--_responsive---container--padding)),
+
+            0 var(--_responsive---container--padding),
+            var(--_responsive---container--padding) var(--_responsive---container--padding));
+}
