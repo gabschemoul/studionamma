@@ -1,4 +1,4 @@
-import { LocomotiveScroll } from "https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.esm.js";
+import LocomotiveScroll from "https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.esm.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const locoScroll = new LocomotiveScroll({
