@@ -10,16 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let soundEnabled = localStorage.getItem("soundEnabled") !== "false";
 
-    soundSwitch.innerText = soundEnabled ? "Sound on" : "Sound off";
-
-    soundSwitch.addEventListener("click", function () {
-        toggleAudio.currentTime = 0;
-        toggleAudio.play().catch(error => console.error("Erreur de lecture du son du switch : ", error));
-
-        soundEnabled = !soundEnabled;
-        localStorage.setItem("soundEnabled", soundEnabled);
+    if(soundSwitch) {
         soundSwitch.innerText = soundEnabled ? "Sound on" : "Sound off";
-    });
+
+        soundSwitch.addEventListener("click", function () {
+            toggleAudio.currentTime = 0;
+            toggleAudio.play().catch(error => console.error("Erreur de lecture du son du switch : ", error));
+
+            soundEnabled = !soundEnabled;
+            localStorage.setItem("soundEnabled", soundEnabled);
+            soundSwitch.innerText = soundEnabled ? "Sound on" : "Sound off";
+        });
+    }
 
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
