@@ -4,3 +4,4 @@ import './locomotive.js';
 import './dark-mode.js';
 import './audio.js';
 import './time-switch.js';
+import './transition.js';
