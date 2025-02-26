@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 // Importation des scripts
 import './cursor.js';
 import './smooth-scroll.js';
