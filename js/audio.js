@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("a");
-    const soundSwitch = document.getElementById("soundSwitch");
 
+
+
+function initSoundControls() {
+    const soundSwitch = document.getElementById("soundSwitch");
     const soundSrc = "https://cdn.jsdelivr.net/gh/gabschemoul/studionamma@main/sounds/gameboy-bip.mp3";
     const toggleSoundSrc = "https://cdn.jsdelivr.net/gh/gabschemoul/studionamma@main/sounds/walkman.mp3";
 
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let soundEnabled = localStorage.getItem("soundEnabled") !== "false";
 
-    if(soundSwitch) {
+    if (soundSwitch) {
         soundSwitch.innerText = soundEnabled ? "Sound on" : "Sound off";
 
         soundSwitch.addEventListener("click", function () {
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    links.forEach(link => {
+    document.querySelectorAll("a").forEach(link => {
         link.addEventListener("mouseenter", () => {
             if (soundEnabled) {
                 let audio = new Audio(soundSrc);
@@ -32,4 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+}
+
+// 🔥 Exécuter une première fois au chargement initial
+document.addEventListener("DOMContentLoaded", initSoundControls);
+
+// 🔥 Réattacher après chaque changement de page avec Barba.js
+barba.hooks.after(() => {
+    initSoundControls();
 });
