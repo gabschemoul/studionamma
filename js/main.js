@@ -6,4 +6,5 @@ import './smooth-scroll.js';
 import './dark-mode.js';
 import './audio.js';
 import './time-switch.js';
+import './scramble.js';
 // import './transition.js';
