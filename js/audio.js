@@ -28,7 +28,7 @@ function initSoundControls() {
         link.addEventListener("mouseenter", () => {
             if (soundEnabled) {
                 let audio = new Audio(soundSrc);
-                audio.volume = 0.3;
+                audio.volume = 0.15;
                 audio.play().catch(error => console.error("Erreur de lecture audio : ", error));
             }
         });
