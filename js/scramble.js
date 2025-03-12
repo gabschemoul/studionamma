@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 duration: 0.6,
                 scrambleText: {
                     text: originalText,
-                    chars: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    //chars: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    chars: "█▓▒░@#&$%-+<>?!",
                     speed: 0.3,
                     revealDelay: 0.2,
                 },
