@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     text: originalText,
                     chars: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     speed: 0.3,
-                    revealDelay: 0.2,
+                    //revealDelay: 0.2,
                 },
                 ease: "power2.out"
             });
