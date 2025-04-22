@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // 9. S'assurer que ScrollTrigger se rafraîchit correctement
     ScrollTrigger.refresh();
-  }, 1000); // Délai important pour s'assurer que tout est chargé
+  }, 250); // Délai important pour s'assurer que tout est chargé
   
   // 10. Rafraîchir lors du redimensionnement
   window.addEventListener('resize', () => {
@@ -264,5 +264,5 @@ document.addEventListener("DOMContentLoaded", function() {
     
     ScrollTrigger.refresh();
     console.log("[title-blur] Animation setup terminé");
-  }, 1200);
+  }, 250);
 }); 

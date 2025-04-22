@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 0.4);
         
         // Étape 3: Pause
-        tl.to({}, { duration: 0.4 });
+        tl.to({}, { duration: 0.2 });
         
         // Étape 4: Repositionner le rectangle
         tl.set(rectangle, {
