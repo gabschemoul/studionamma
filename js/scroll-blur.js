@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const isAlreadyVisible = elementRect.top < window.innerHeight && elementRect.bottom > 0;
           
           if (isAlreadyVisible) {
-            gsap.set(element, { visibility: 'visible' });
+            gsap.set(element, { autoAlpha: 1 });
             gsap.to(splitText.words, {
               autoAlpha: 1,
               x: 0,
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
               duration: 0.5
             });
           } else {
-            gsap.set(element, { visibility: 'visible' });
+            gsap.set(element, { autoAlpha: 1 });
 
             // 7. Créer une timeline pour l'animation
             const tl = gsap.timeline({paused: true});
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const isAlreadyVisible = elementRect.top < window.innerHeight && elementRect.bottom > 0;
           
           if (isAlreadyVisible) {
-            gsap.set(element, { visibility: 'visible' });
+            gsap.set(element, { autoAlpha: 1 });
             gsap.to(splitText.chars, {
               autoAlpha: 1,
               x: 0,
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function() {
               }
             });
           } else {
-            gsap.set(element, { visibility: 'visible' });
+            gsap.set(element, { autoAlpha: 1 });
 
             // Créer une timeline pour l'animation
             const tl = gsap.timeline({paused: true});
