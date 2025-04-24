@@ -251,24 +251,30 @@
             const isAlreadyVisible = elementRect.top < window.innerHeight && elementRect.bottom > 0;
             
             if (isAlreadyVisible) {
-              gsap.to(splitText.chars, {
-                autoAlpha: 1,
-                x: 0,
-                filter: 'blur(0px)',
-                stagger: 0.02,
-                duration: 0.3,
-                overwrite: true, // MODIFICATION 11: Ajouter overwrite
-                onComplete: () => {
-                  // MODIFICATION 12: S'assurer que l'élément parent est visible
-                  gsap.set(element, {autoAlpha: 1, overwrite: true});
-                  
-                  // Optionnel: restaurer la structure originale après l'animation
-                  if (originalHTML.includes('<br') || originalHTML.includes('\n')) {
-                    // On pourrait restaurer ici si nécessaire
-                  }
-                }
-              });
-            } else {
+                // Option 1: Animation plus lente pour les éléments déjà visibles
+                gsap.to(splitText.chars, {
+                  autoAlpha: 1,
+                  x: 0,
+                  filter: 'blur(0px)',
+                  stagger: 0.05,  // Augmenter le stagger
+                  duration: 0.8,  // Augmenter la durée
+                  overwrite: true
+                });
+                
+                // Option 2: Ou, pour un effet plus progressif, vous pourriez utiliser
+                // une timeline avec un délai
+                /*
+                const tl = gsap.timeline();
+                tl.to(splitText.chars, {
+                  autoAlpha: 1,
+                  x: 0,
+                  filter: 'blur(0px)',
+                  stagger: 0.05,
+                  duration: 0.8,
+                  overwrite: true
+                }, 0.5); // Délai de 0.5s avant de commencer
+                */
+              } else {
               // Créer une timeline pour l'animation
               const tl = gsap.timeline({paused: true});
               
