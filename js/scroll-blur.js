@@ -1,89 +1,7 @@
-// Ajoutez ceci à votre CSS:
-// .text-blur, .title-blur {
-//   visibility: hidden;
-// }
-
 // Solution complète pour l'animation text-blur avec SplitText
 // Basée sur les meilleures pratiques des forums GSAP et Webflow
 
-// Ajoutez ce code au début de votre fichier JS (avant tout autre code GSAP)
-(function() {
-    // Créer une classe temporaire pour les éléments
-    const styleEl = document.createElement('style');
-    styleEl.id = 'temp-visibility-style';
-    styleEl.innerHTML = `
-      /* Style temporaire pour permettre à GSAP de fonctionner */
-      .title-blur-temp, .text-blur-temp {
-        visibility: visible !important;
-        opacity: 0;
-        display: inline-block !important;
-      }
-    `;
-    document.head.appendChild(styleEl);
-    
-    // Attendre le chargement du DOM
-    document.addEventListener('DOMContentLoaded', function() {
-      // Ajouter une classe temporaire à tous les éléments
-      document.querySelectorAll('.title-blur, .text-blur').forEach(el => {
-        el.classList.add(el.classList.contains('title-blur') ? 'title-blur-temp' : 'text-blur-temp');
-      });
-      
-      // Supprimer la classe temporaire et la feuille de style après initialisation de GSAP
-      setTimeout(() => {
-        document.querySelectorAll('.title-blur-temp, .text-blur-temp').forEach(el => {
-          el.classList.remove('title-blur-temp');
-          el.classList.remove('text-blur-temp');
-        });
-        if (styleEl.parentNode) {
-          styleEl.parentNode.removeChild(styleEl);
-        }
-      }, 1000);
-    });
-  })();
-
 document.addEventListener("DOMContentLoaded", function() {
-
-    // Ajoutez ce code au début de votre fichier JS
-(function() {
-    // Créer une feuille de style qui annule tout
-    const styleEl = document.createElement('style');
-    styleEl.id = 'force-visibility-style';
-    styleEl.innerHTML = `
-      /* Règle avec la plus haute priorité possible */
-      .title-blur, .text-blur {
-        visibility: visible !important;
-        opacity: 1 !important;
-        display: block !important;
-      }
-    `;
-    
-    // Ajouter la feuille de style après 1 seconde
-    setTimeout(() => {
-      document.head.appendChild(styleEl);
-      console.log("Styles forcés appliqués");
-    }, 1000);
-  })();
-    // CODE DE DÉBOGAGE POUR IDENTIFIER LE PROBLÈME
-  console.log("DOM chargé, vérification des éléments");
-  
-  // Force tous les éléments à être visibles après 2 secondes
-  setTimeout(() => {
-    document.querySelectorAll('.text-blur, .title-blur').forEach(el => {
-      console.log("Élément trouvé:", el.id || el.className);
-      console.log("  - visibility:", getComputedStyle(el).visibility);
-      console.log("  - opacity:", getComputedStyle(el).opacity);
-      
-      // Forcer la visibilité
-      el.style.visibility = "visible";
-      el.style.opacity = "1";
-      
-      // Pour être absolument sûr
-      el.style.display = "inline-block";
-      
-      console.log("  > Visibilité forcée");
-    });
-  }, 2000);
-
     // Attendre que tout soit vraiment chargé avant d'initialiser
     setTimeout(() => {
       // Vérifier si GSAP est disponible
@@ -104,9 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       gsap.registerPlugin(ScrollTrigger, SplitText);
-      
-      // Solution GSAP pour FOUC - Initialiser les éléments avec autoAlpha
-      gsap.set(".text-blur, .title-blur", {autoAlpha: 0});
       
       // Problème clé: Webflow peut ajouter des éléments span à l'intérieur du texte
       // qui interfèrent avec SplitText. On nettoie d'abord le texte.
@@ -138,14 +53,15 @@ document.addEventListener("DOMContentLoaded", function() {
           // Vérifier que la division a fonctionné
           if (!splitText.words || splitText.words.length === 0) {
             console.error(`[text-blur] Échec de SplitText pour l'élément ${index}`);
-            // Solution GSAP pour FOUC - autoAlpha au lieu de opacity
-            gsap.set(element, {autoAlpha: 1});
+            element.style.opacity = 1; // Rendre visible en cas d'échec
             return;
           }
-                  
+          
+          console.log(`[text-blur] Élément ${index} divisé en ${splitText.words.length} mots`);
+          
           // 5. Appliquer les styles initiaux
           gsap.set(splitText.words, {
-            autoAlpha: 0,
+            opacity: 0,
             x: 10,
             filter: 'blur(10px)'
           });
@@ -155,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const isAlreadyVisible = elementRect.top < window.innerHeight && elementRect.bottom > 0;
           
           if (isAlreadyVisible) {
+            gsap.set(element, { visibility: 'visible' });
             gsap.to(splitText.words, {
               autoAlpha: 1,
               x: 0,
@@ -163,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
               duration: 0.5
             });
           } else {
+            gsap.set(element, { visibility: 'visible' });
+
             // 7. Créer une timeline pour l'animation
             const tl = gsap.timeline({paused: true});
             
@@ -201,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         } catch (error) {
           console.error(`[text-blur] Erreur pour l'élément ${index}:`, error);
-          // Solution GSAP pour FOUC - autoAlpha au lieu de opacity
-          gsap.set(element, {autoAlpha: 1});
+          // Rendre visible en cas d'erreur
+          element.style.opacity = 1;
         }
       });
       
@@ -264,14 +183,13 @@ document.addEventListener("DOMContentLoaded", function() {
           
           if (!splitText.chars || splitText.chars.length === 0) {
             console.error(`[title-blur] Échec de SplitText pour l'élément ${index}`);
-            // Solution GSAP pour FOUC - autoAlpha au lieu de opacity
-            gsap.set(element, {autoAlpha: 1});
+            element.style.opacity = 1;
             return;
           }
                   
           // Appliquer les styles initiaux
           gsap.set(splitText.chars, {
-            autoAlpha: 0,
+            opacity: 0,
             x: 10,
             filter: 'blur(10px)'
           });
@@ -292,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const isAlreadyVisible = elementRect.top < window.innerHeight && elementRect.bottom > 0;
           
           if (isAlreadyVisible) {
+            gsap.set(element, { visibility: 'visible' });
             gsap.to(splitText.chars, {
               autoAlpha: 1,
               x: 0,
@@ -306,6 +225,8 @@ document.addEventListener("DOMContentLoaded", function() {
               }
             });
           } else {
+            gsap.set(element, { visibility: 'visible' });
+
             // Créer une timeline pour l'animation
             const tl = gsap.timeline({paused: true});
             
@@ -343,8 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         } catch (error) {
           console.error(`[title-blur] Erreur pour l'élément ${index}:`, error);
-          // Solution GSAP pour FOUC - autoAlpha au lieu de opacity
-          gsap.set(element, {autoAlpha: 1});
+          element.style.opacity = 1;
         }
       });
       
