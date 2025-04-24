@@ -7,6 +7,27 @@
 // Basée sur les meilleures pratiques des forums GSAP et Webflow
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    // Ajoutez ce code au début de votre fichier JS
+(function() {
+    // Créer une feuille de style qui annule tout
+    const styleEl = document.createElement('style');
+    styleEl.id = 'force-visibility-style';
+    styleEl.innerHTML = `
+      /* Règle avec la plus haute priorité possible */
+      .title-blur, .text-blur {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block !important;
+      }
+    `;
+    
+    // Ajouter la feuille de style après 1 seconde
+    setTimeout(() => {
+      document.head.appendChild(styleEl);
+      console.log("Styles forcés appliqués");
+    }, 1000);
+  })();
     // CODE DE DÉBOGAGE POUR IDENTIFIER LE PROBLÈME
   console.log("DOM chargé, vérification des éléments");
   
@@ -27,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("  > Visibilité forcée");
     });
   }, 2000);
-  
+
     // Attendre que tout soit vraiment chargé avant d'initialiser
     setTimeout(() => {
       // Vérifier si GSAP est disponible
