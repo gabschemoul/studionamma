@@ -7,6 +7,27 @@
 // Basée sur les meilleures pratiques des forums GSAP et Webflow
 
 document.addEventListener("DOMContentLoaded", function() {
+    // CODE DE DÉBOGAGE POUR IDENTIFIER LE PROBLÈME
+  console.log("DOM chargé, vérification des éléments");
+  
+  // Force tous les éléments à être visibles après 2 secondes
+  setTimeout(() => {
+    document.querySelectorAll('.text-blur, .title-blur').forEach(el => {
+      console.log("Élément trouvé:", el.id || el.className);
+      console.log("  - visibility:", getComputedStyle(el).visibility);
+      console.log("  - opacity:", getComputedStyle(el).opacity);
+      
+      // Forcer la visibilité
+      el.style.visibility = "visible";
+      el.style.opacity = "1";
+      
+      // Pour être absolument sûr
+      el.style.display = "inline-block";
+      
+      console.log("  > Visibilité forcée");
+    });
+  }, 2000);
+  
     // Attendre que tout soit vraiment chargé avant d'initialiser
     setTimeout(() => {
       // Vérifier si GSAP est disponible
