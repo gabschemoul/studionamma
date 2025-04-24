@@ -6,6 +6,41 @@
 // Solution complète pour l'animation text-blur avec SplitText
 // Basée sur les meilleures pratiques des forums GSAP et Webflow
 
+// Ajoutez ce code au début de votre fichier JS (avant tout autre code GSAP)
+(function() {
+    // Créer une classe temporaire pour les éléments
+    const styleEl = document.createElement('style');
+    styleEl.id = 'temp-visibility-style';
+    styleEl.innerHTML = `
+      /* Style temporaire pour permettre à GSAP de fonctionner */
+      .title-blur-temp, .text-blur-temp {
+        visibility: visible !important;
+        opacity: 0;
+        display: inline-block !important;
+      }
+    `;
+    document.head.appendChild(styleEl);
+    
+    // Attendre le chargement du DOM
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ajouter une classe temporaire à tous les éléments
+      document.querySelectorAll('.title-blur, .text-blur').forEach(el => {
+        el.classList.add(el.classList.contains('title-blur') ? 'title-blur-temp' : 'text-blur-temp');
+      });
+      
+      // Supprimer la classe temporaire et la feuille de style après initialisation de GSAP
+      setTimeout(() => {
+        document.querySelectorAll('.title-blur-temp, .text-blur-temp').forEach(el => {
+          el.classList.remove('title-blur-temp');
+          el.classList.remove('text-blur-temp');
+        });
+        if (styleEl.parentNode) {
+          styleEl.parentNode.removeChild(styleEl);
+        }
+      }, 1000);
+    });
+  })();
+
 document.addEventListener("DOMContentLoaded", function() {
 
     // Ajoutez ce code au début de votre fichier JS
