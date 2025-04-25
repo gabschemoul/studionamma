@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const modeSwitch = document.getElementById("modeSwitch");
     const body = document.body;
 
@@ -20,4 +20,4 @@
             localStorage.setItem("darkMode", "enabled");
         }
     });
-});*/
+});
