@@ -4,7 +4,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 import './cursor.js';
 import './smooth-scroll.js'; // À vérifier si toujours utile
 import './dark-mode.js';
-import './audio.js';
 import './time-switch.js';
 import './scramble.js';
 // import './transition.js'; // L'ancien fichier de transition, maintenant commenté
