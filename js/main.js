@@ -5,13 +5,13 @@ import './cursor.js';
 import './smooth-scroll.js'; // À vérifier si toujours utile
 import './dark-mode.js';
 import './time-switch.js';
-import './scramble.js';
+// import './scramble.js';
 // import './transition.js'; // L'ancien fichier de transition, maintenant commenté
 
 // Importation des nouveaux modules
 import './mono-appear.js';
-import './page-transitions.js';
-import './scroll-blur.js';
+// import './page-transitions.js';
+// import './scroll-blur.js';
 
 // Initialisation globale si nécessaire (ex: enregistrement global de plugins GSAP)
 // gsap.registerPlugin(ScrollTrigger, SplitText, /* ... autres plugins ... */);
